@@ -2,4 +2,4 @@ sudo echo $(kubeadm token create --print-join-command) --control-plane --certifi
 
 sudo token=$(cat masterjointoken.txt)
 
-sudo aws secretsmanager update-secret --secret-id secretmaster --secret-string echo $token
+sudo aws secretsmanager update-secret --secret-id secretmaster --secret-string $token
